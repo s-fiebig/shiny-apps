@@ -1,0 +1,1 @@
+Enhanced version of tutorial 5 (http://shiny.rstudio.com/tutorial/lesson5/) showing how to use validate to catch boundary cases. 

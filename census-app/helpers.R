@@ -11,6 +11,11 @@ percent_map <- function(var, color, legend.title, min = 0, max = 100) {
   var <- pmin(var, max)
   percents <- as.integer(cut(var, 100, 
     include.lowest = TRUE, ordered = TRUE))
+
+  validate(
+    need(!all(percents == 50, na.rm = TRUE), "Wrong Intervall Selection")
+  )
+
   fills <- shades[percents]
 
   # plot choropleth map
